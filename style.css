@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    background: #181818;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+/* Zone principale */
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.big-cover {
+    width: 70%;
+    max-width: 500px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    object-fit: cover;
+}
+
+/* Bandeau en bas */
+.player-bar {
+    background: #282828;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+}
+
+/* Song info fixe pour ne pas décaler les autres éléments */
+.song-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 250px; /* largeur fixe */
+    flex-shrink: 0; /* ne se réduit pas */
+}
+
+.cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* si le texte est trop long */
+}
+
+.artist {
+    color: #b3b3b3;
+    font-size: 0.95em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0; /* ne se réduit pas */
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.controls button:hover {
+    color: #e21717;
+}
+
+.progress-container {
+    flex-grow: 1; /* prend tout l'espace restant */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 40px;
+}
+
+.progress-bar {
+    background: #404040;
+    height: 4px;
+    border-radius: 2px;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress {
+    background: #e21717;
+    height: 100%;
+    width: 40%;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.time {
+    font-size: 0.9em;
+    color: #b3b3b3;
+    width: 40px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .player-bar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    .progress-container {
+        margin: 0;
+    }
+    .big-cover {
+        width: 90%;
+    }
+}

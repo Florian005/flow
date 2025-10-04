@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecteur Spotify Like</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Lien vers le CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="main-content">
+        <img class="big-cover" src="mortals.jpg" alt="Album Cover Géant">
+    </div>
+
+    <div class="player-bar">
+        <div class="song-info">
+            <img class="cover" src="mortals.jpg" alt="Album Cover">
+            <div class="details">
+                <span class="title">Nom de la chanson</span>
+                <span class="artist">Nom de l'artiste</span>
+            </div>
+        </div>
+        <div class="controls">
+            <button title="Précédent"><i class="fa fa-step-backward"></i></button>
+            <button id="play-btn" title="Lecture/Pause"><i class="fa fa-play-circle"></i></button>
+            <button title="Suivant"><i class="fa fa-step-forward"></i></button>
+        </div>
+        <div class="progress-container">
+            <span class="time" id="current-time">0:00</span>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <span class="time" id="duration">0:00</span>
+        </div>
+    </div>
+    <audio id="audio"></audio>
+    <!-- Lien vers le JS -->
+    <script src="script.js"></script>
+</body>
+</html>
